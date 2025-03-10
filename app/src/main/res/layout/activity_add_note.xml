@@ -11,6 +11,7 @@
         android:id="@+id/TitleEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="text"
         android:text="Otsikko"
@@ -23,20 +24,34 @@
         android:id="@+id/ContentEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="109dp"
         android:ems="10"
         android:inputType="text"
         android:text="Sisältö"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="279dp" />
+        app:layout_constraintTop_toBottomOf="@+id/TitleEdit" />
 
     <Button
         android:id="@+id/AddNoteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="addNotepad"
         android:text="Lisää muistilappu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ContentEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/ContentEdit"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="SwitchMainActivity"
+        android:text="Palaa päävalikkoon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddNoteButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,13 +26,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void AddNoteActivityButtonWork(View view) {
+    public void SwitchAddNoteActivity(View view) {
         Intent intent = new Intent(this, AddNoteActivity.class);
         startActivity(intent);
 
     }
 
-    public void ListNoteActivityButtonWork(View view) {
+    public void SwitchListNoteActivity(View view) {
         Intent intent = new Intent(this, ListNotesActivity.class);
         startActivity(intent);
 
