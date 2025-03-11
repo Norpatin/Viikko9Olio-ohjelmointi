@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class NotePadListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 
     private Context context;
-    private ArrayList<Note> notes = new ArrayList<>();
+    //private ArrayList<Note> notes = new ArrayList<>();   ??? versio 4 oli
 
 
     @NonNull
