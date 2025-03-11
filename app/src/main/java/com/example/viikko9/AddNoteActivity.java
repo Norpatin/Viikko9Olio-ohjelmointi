@@ -35,6 +35,10 @@ public class AddNoteActivity extends AppCompatActivity {
         //this.content = content; ???
     }
 
+    public void addNote(View view) {
+        NoteStorage.getInstance().addNote(new Note());
+    }
+
     public void SwitchMainActivity(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);

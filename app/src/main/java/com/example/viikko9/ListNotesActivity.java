@@ -9,10 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ListNotesActivity extends AppCompatActivity {
 
+    private NoteStorage noteStorage;
     private RecyclerView recyclerView;
 
     @Override
@@ -26,7 +28,12 @@ public class ListNotesActivity extends AppCompatActivity {
             return insets;
         });
 
+        noteStorage = NoteStorage.getInstance();
+
         recyclerView = findViewById(R.id.ListNotesRV);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new NotePadListAdapter(getApplicationContext(), noteStorage.getNotes()));
     }
 
     public void SwitchMainActivity(View view) {

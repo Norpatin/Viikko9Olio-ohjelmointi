@@ -1,7 +1,5 @@
 package com.example.viikko9;
 
-import android.provider.ContactsContract;
-
 import java.util.ArrayList;
 
 public class NoteStorage {
@@ -21,11 +19,15 @@ public class NoteStorage {
         return notes;
     }
 
-    public void addRocket(Note notes) {
+    public Note getNoteStorageById(int id) {
+        return notes.remove(id);
+    }
+
+    public void addNote(Note notes) {
         notes.add(notes);
     }
 
-
-
-
+    public ArrayList<Note> getNotes() {
+        return notes;
+    }
 }
