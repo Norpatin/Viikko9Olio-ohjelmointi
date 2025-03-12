@@ -36,7 +36,7 @@
         android:id="@+id/AddNoteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="addNotepad"
+        android:onClick="addNote"
         android:text="Lisää muistilappu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,21 +7,21 @@ public class Note {
     private int Id;
     private String timeAndDate;
 
-    public Note() {
+    /*public Note() {
         this.title = title;
         this.content = content;
-
+        this.Id = Id;
+        this.timeAndDate = timeAndDate;
     }
+    /**/
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public Note(String title, String content) {
+        this.title = (title);
+        this.content = (content);
     }
 
     public void add(Note notes) {
+        //NoteStorage.addNote(notes);
     }
 
     public String getTitle() {

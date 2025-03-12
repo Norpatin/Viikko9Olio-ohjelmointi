@@ -20,6 +20,7 @@ public class NotePadListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
     }
 
 
+
     //public NotePadListAdapter(Context applicationContext, ArrayList<Note> rocets) {
     //}
 
@@ -28,13 +29,13 @@ public class NotePadListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
     @NonNull
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new NoteViewHolder(LayoutInflater.from(context).inflate(R.layout.notepad_view, parent, false)); //Lisätty klo 17.53
+        return new NoteViewHolder(LayoutInflater.from(context).inflate(R.layout.notepad_view, parent, false)); //Lisätty klo 17.53 11.3
         //return null; Oli aiemmin kun loi
     }
 
     @Override
     public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-        holder.NoteTitleText.setText(notes.get(position).getTitle() + " (" + notes.get(position).getId() +")");
+        holder.NoteTitleText.setText(notes.get(position).getTitle());// + " (" + notes.get(position).getId() +")");
         holder.NoteContentText.setText(String.valueOf(notes.get(position).getContent()));
     }
 
