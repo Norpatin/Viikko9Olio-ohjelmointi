@@ -3,20 +3,20 @@ package com.example.viikko9;
 public class Note {
     protected String title;
     protected String content;
-    public static int id = 0;
+    public static int Id = 0;
     protected String timeAndDate;
 
     public Note() {
         this.title = title;
         this.content = content;
-        this.id = id;
+        this.Id = Id;
         this.timeAndDate = timeAndDate;
     }
 
     public Note(String title, String content){
         this.title = title;
         this.content = content;
-        id++;
+        Id++;
     }
 
     public void add(Note notes) {
@@ -28,7 +28,7 @@ public class Note {
     }
 
     public Integer getId() {
-        return id;
+        return Id;
     }
 
     public String getContent() {
