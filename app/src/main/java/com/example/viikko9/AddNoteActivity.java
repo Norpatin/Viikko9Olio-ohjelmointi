@@ -33,31 +33,10 @@ public class AddNoteActivity extends AppCompatActivity {
         content = findViewById(R.id.ContentEdit);
     }
 
-    //public void addNotepad(View view) {
-
-    //title = findViewById(R.id.TitleEdit);
-    //content = findViewById(R.id.ContentEdit);
-    //this.title = title; ???
-    //this.content = content; ???
-    //}
-
     public void addNote(View view) {
-        //EditText EtxtTitle = findViewById(R.id.TitleEdit);
-        //EditText EtxtContent = findViewById(R.id.ContentEdit);
         String titleS = title.getText().toString();
         String contentS = content.getText().toString();
         NoteStorage.getInstance().addNote(new Note(titleS, contentS));
-        //NoteStorage.getInstance().addNote(new (EtxtTitle, EtxtContent));
-        //Testi testi = new Testi(EtxtTitle, EtxtContent);
-        //***String StringTitle = EtxtTitle.getText().toString();
-        //***String StringContent = EtxtContent.getText().toString();
-        //***Note note = new Note(StringTitle, StringContent);
-        //note.add(note);
-        //NoteStorage.getInstance().addNote(note);
-        //title = findViewById(R.id.NoteTitleText);
-        //content1 = findViewById(R.id.NoteContentText);
-        //TextView rgRocketType = findViewById(R.id.NoteIdText);
-        //    NoteStorage.getInstance().addNote(new Note());
     }
 
     public void SwitchMainActivity(View view) {

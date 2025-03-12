@@ -1,23 +1,22 @@
 package com.example.viikko9;
 
 public class Note {
-    private String title;
-    private String content;
+    protected String title;
+    protected String content;
+    public static int id = 0;
+    protected String timeAndDate;
 
-    private int Id;
-    private String timeAndDate;
-
-    /*public Note() {
+    public Note() {
         this.title = title;
         this.content = content;
-        this.Id = Id;
+        this.id = id;
         this.timeAndDate = timeAndDate;
     }
-    /**/
 
-    public Note(String title, String content) {
-        this.title = (title);
-        this.content = (content);
+    public Note(String title, String content){
+        this.title = title;
+        this.content = content;
+        id++;
     }
 
     public void add(Note notes) {
@@ -29,7 +28,7 @@ public class Note {
     }
 
     public Integer getId() {
-        return Id;
+        return id;
     }
 
     public String getContent() {

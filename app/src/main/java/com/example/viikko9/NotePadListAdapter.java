@@ -19,13 +19,6 @@ public class NotePadListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
         this.notes = notes;
     }
 
-
-
-    //public NotePadListAdapter(Context applicationContext, ArrayList<Note> rocets) {
-    //}
-
-
-
     @NonNull
     @Override
     public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -35,7 +28,7 @@ public class NotePadListAdapter extends RecyclerView.Adapter<NoteViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
-        holder.NoteTitleText.setText(notes.get(position).getTitle());// + " (" + notes.get(position).getId() +")");
+        holder.NoteTitleText.setText(notes.get(position).getTitle());
         holder.NoteContentText.setText(String.valueOf(notes.get(position).getContent()));
     }
 
